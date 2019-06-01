@@ -1,6 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {MatPaginator, MatSort, MatTableDataSource, Sort} from '@angular/material';
+import {
+    MatPaginator,
+    MatSort,
+    MatTableDataSource,
+    Sort,
+} from '@angular/material';
+
 import { User } from '../../../core/models';
 import { AVAILABLE_COLUMNS } from '../../../core/constants';
 import { UrlSortService } from '../../../core/services';
@@ -30,8 +36,8 @@ export class UserTableComponent implements OnInit {
 
         const sortingOrderFromUrl = this.urlSortingService.getSortingOrder();
         if (sortingOrderFromUrl) {
-          this.data.sort.direction = sortingOrderFromUrl.direction;
-          this.data.sort.active = sortingOrderFromUrl.active;
+            this.data.sort.direction = sortingOrderFromUrl.direction;
+            this.data.sort.active = sortingOrderFromUrl.active;
         }
     }
 

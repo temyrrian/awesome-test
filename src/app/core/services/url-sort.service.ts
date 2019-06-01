@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Sort } from '@angular/material';
+
 import { AVAILABLE_COLUMNS } from '../constants';
-import {Sort} from '@angular/material';
 
 @Injectable()
 export class UrlSortService {
-    constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
+    constructor(
+        private activatedRoute: ActivatedRoute,
+        private router: Router
+    ) {}
 
     getSortingOrder(): Sort {
         const direction = this.activatedRoute.snapshot.queryParams.direction;
@@ -25,17 +29,17 @@ export class UrlSortService {
     }
 
     setSortingOrder(sortData: Sort) {
-      if (sortData.active && sortData.direction) {
-        this.router.navigate([], {
-          relativeTo: this.activatedRoute,
-          queryParams: sortData,
-          queryParamsHandling: 'merge', // remove to replace all query params by provided
-        });
-      } else {
-        this.router.navigate([], {
-          relativeTo: this.activatedRoute,
-          queryParams: {},
-        });
-      }
+        if (sortData.active && sortData.direction) {
+            this.router.navigate([], {
+                relativeTo: this.activatedRoute,
+                queryParams: sortData,
+                queryParamsHandling: 'merge'
+            });
+        } else {
+            this.router.navigate([], {
+                relativeTo: this.activatedRoute,
+                queryParams: {}
+            });
+        }
     }
 }

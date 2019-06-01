@@ -1,13 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 import { User } from '../models';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ApiService {
-  protected baseUrl = '/users';
-
   constructor(protected http: HttpClient) { }
 
   saveUser(data: User) {
