@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TableComponent } from './user-table/table.component';
-import {CoreModule} from '../../core/core.module';
+import { UserTableComponent } from './user-table/user-table.component';
+import { CoreModule } from '../../core/core.module';
+import {UrlSortService} from '../../core/services';
 
 @NgModule({
   imports: [
     CommonModule,
-    CoreModule
+    CoreModule,
   ],
-  declarations: [TableComponent]
+  providers: [UrlSortService],
+  declarations: [UserTableComponent]
 })
 export class UsersTableModule { }

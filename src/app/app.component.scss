@@ -1,1 +1,12 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.router-wrapper {
+  margin: 100px;
+}
+
+app-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}

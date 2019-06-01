@@ -1,22 +1,29 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 
-import { TableComponent } from './modules/users-table/user-table/table.component';
+import { UserTableComponent } from './modules/users-table/user-table/user-table.component';
 import {UserCreateFormComponent} from './modules/user-creating/user-create-form/user-create-form.component';
 import {UsersTableModule} from './modules/users-table/users-table.module';
-import {UserCreatinModule} from './modules/user-creating/user-creatin.module';
+import {UserCreatingModule} from './modules/user-creating/user-creating.module';
+import {UsersResolver} from './core/resolvers';
 
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'users-list', pathMatch: 'full' },
-  { path: 'users-list', component: TableComponent },
+  {
+    path: 'users-list',
+    component: UserTableComponent,
+    resolve: {
+      users: UsersResolver
+    }
+  },
   { path: 'users-create', component: UserCreateFormComponent },
 ];
 
 const pageModules = [
   UsersTableModule,
-  UserCreatinModule
+  UserCreatingModule
 ];
 
 @NgModule({
@@ -27,6 +34,7 @@ const pageModules = [
       anchorScrolling: 'enabled'
     })
   ],
+  providers: [ UsersResolver ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {}

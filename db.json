@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "name": "Peter Parcker",
+      "email": "spidy@asda",
+      "phone": "123456",
+      "birthday": "1988-05-31T20:00:00.000Z",
+      "id": 1
+    },
+    {
+      "name": "Thor",
+      "email": "strongest@avenger",
+      "phone": "34567",
+      "birthday": "1009-06-03T21:57:56.000Z",
+      "id": 2
+    },
+    {
+      "name": "Artem",
+      "email": "temyrrian@gmail.com",
+      "phone": "+380991109017",
+      "birthday": "1988-06-26T20:00:00.000Z",
+      "id": 3
+    },
+    {
+      "name": "mr. Stark",
+      "email": "tony@iron.com",
+      "phone": "9379992",
+      "birthday": "1970-05-28T21:00:00.000Z",
+      "id": 4
+    },
+    {
+      "name": "Rocky Raccoon",
+      "email": "meandgroot@gmail.com",
+      "phone": "345678765",
+      "birthday": "1976-06-03T21:00:00.000Z",
+      "id": 5
+    },
+    {
+      "name": "Groot",
+      "email": "Iam@groot",
+      "phone": "groooot",
+      "birthday": "1970-01-12T21:00:00.000Z",
+      "id": 6
+    }
+  ]
+}
