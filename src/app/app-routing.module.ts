@@ -19,11 +19,11 @@ const routes: Routes = [
     { path: 'users-create', component: UserCreateFormComponent },
 ];
 
-const pageModules = [UsersTableModule, UserCreatingModule];
+const PAGE_MODULES = [UsersTableModule, UserCreatingModule];
 
 @NgModule({
     imports: [
-        ...pageModules,
+        ...PAGE_MODULES,
         RouterModule.forRoot(routes, {
             scrollPositionRestoration: 'enabled',
             anchorScrolling: 'enabled',
